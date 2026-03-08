@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.Hero-section{
+    width: 1,440px;
+    height: 1142px;
+    top: 99px;
+    background-color: #1E1E1E;
+    border: 4px solid black;
+    color: aliceblue;
+}
+.container-wrapper{
+    width: 900px;
+    height: 392px;
+    top: 100px;
+    left: 270px;
+    gap: 32px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+}
+.logo-slider{
+    width: 120px;
+}
