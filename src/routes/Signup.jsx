@@ -1,12 +1,27 @@
 import React from 'react'
 import { Notebook } from 'lucide-react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useAuth } from '../context/AuthContext';
 
 export default function Signup() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [passwordconfirm, setPasswordconfirm] = useState();
+  const [loading, setLoading] = useState();
+  const [error, setError] = useState();
+
+  const {signup} = useAuth();
+  const navigate = useNavigate();
+
+  const handlSubmit =async (e) =>{
+    e.preventDefault();
+    setError("");
+    if(!email || !password || !passwordconfirm){
+      return setError("Please fill all the fields")
+    }
+  }
+
   return (
     <div className="max-w-md mx-auto mt-10">
       <div className="bg-white rounded-lg shadow-md p-8">
